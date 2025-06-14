@@ -33,6 +33,10 @@ export const DeviceSelector: React.FC = () => {
           (device: MediaDeviceInfo) =>
             device.kind === "videoinput" && device.deviceId.trim() !== ""
         )
+
+        if (videoDevices.length > 0 && !selectedDeviceId)
+          setSelectedDeviceId(videoDevices[0].deviceId)
+
         // Set the enumerated devices
         setDevices(videoDevices)
       } catch (error: unknown) {

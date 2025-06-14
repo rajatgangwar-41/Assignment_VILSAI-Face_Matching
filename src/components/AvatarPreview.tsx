@@ -21,8 +21,8 @@ export const AvatarPreview: React.FC = () => {
       setIsVerifyingImages(true)
       setMatchResult(null)
 
-      // const profileUrl: string = "/profile.png" // Local static image in public folder
-      const profileUrl: string = PROFILE_PHOTO_URL // static image through external link
+      const profileUrl: string = "/profile.png" // Local static image in public folder
+      // const profileUrl: string = PROFILE_PHOTO_URL // static image through external link
 
       // Storing the result of the verifyMatch function
       const isMatch: boolean = await verifyMatch(profileUrl, avatar)
